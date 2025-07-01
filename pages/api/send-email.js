@@ -13,16 +13,28 @@ export default async function handler(req, res) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          from: "Your App <noreply@oshomedia.shop>",
+          from: "Osho Vault <noreply@oshomedia.shop>",
           to: toEmail,
-          subject: "Thanks for your payment",
-          html: `<div style="font-family: Arial, sans-serif; color: #333;">
-          <h2>✅ Payment Successful</h2>
-          <p>Thank you for your payment! You can access your download or content using the link below:</p>
-          <a href="${link}" style="background-color: #4CAF50; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px;">Access Now</a>
-          <p>If you have any questions, feel free to reply to this email.</p>
-          <br/>
-          <p>— The Osho Vault Team</p>
+          subject: "Payment received! Unlock your exclusive access",
+          html: `<div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 24px; background: #f9f9f9; border: 1px solid #eaeaea; border-radius: 10px;">
+      
+          <h2 style="color: #4CAF50; margin-bottom: 10px;">Your Premium Content is Ready 🎉</h2>
+      
+          <p style="font-size: 16px; color: #333;">Thank you for your payment. Your support means a lot to us!</p>
+          
+          <p style="font-size: 16px; color: #333;">Click the button below to access your exclusive Osho content:</p>
+      
+          <div style="text-align: center; margin: 30px 0;">
+            <a href="${link}" style="background-color: #4CAF50; color: white; padding: 14px 28px; text-decoration: none; font-weight: bold; border-radius: 6px;">
+              Access Content
+            </a>
+          </div>
+      
+          <p style="font-size: 14px; color: #666;">Stay inspired, stay spiritual 🌿</p>
+      
+          <hr style="margin: 30px 0;" />
+      
+          <p style="font-size: 12px; color: #999;">This email was sent by Osho Vault via oshomedia.shop</p>
         </div>`,
         }),
       });
